@@ -1,0 +1,6 @@
+dependencies:
+  # M5Unified がボードを立ち上げる (電源 IC、パネル、タッチ)。M5GFX はパネルと、
+  # フレームバッファを送り出す SPI バス (setWindow / writePixelsDMA / waitDMA)。
+  m5stack/m5gfx: "^0.2.25"
+  m5stack/m5unified: "^0.2.18"
+  idf: ">=5.5"

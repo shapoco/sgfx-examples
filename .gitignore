@@ -1,0 +1,23 @@
+# Build outputs
+build/
+*.ppm
+
+# Editor / tool state
+.vscode/
+.claude/settings.local.json
+
+# Emscripten
+.emscripten_cache/
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary files
+tmp.*
+tmp.*/
+
+# ESP-IDF projects (dependencies.lock is kept)
+managed_components/
+sdkconfig
+sdkconfig.old

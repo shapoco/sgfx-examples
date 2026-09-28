@@ -1,0 +1,25 @@
+# Meow-M5Cores3 (M5Stack CoreS3: ESP32-S3, フラッシュ 16 MB)。PSRAM は使わない。
+CONFIG_IDF_TARGET="esp32s3"
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+# USB-C はチップ内蔵の USB-Serial/JTAG につながっている
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+
+# kitty のテクスチャはフラッシュからデータキャッシュ経由で読まれる。
+# いちばん大きなキャッシュにしておく。
+CONFIG_ESP32S3_DATA_CACHE_64KB=y
+CONFIG_ESP32S3_DATA_CACHE_LINE_64B=y
+
+# 描画時間の大半は ShapoGFX と M5GFX の中なので、ツリー全体を速度優先で最適化する
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+CONFIG_FREERTOS_HZ=1000
+
+# フレームループはメインタスクのスタック上のローカル変数に描画する
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=16384
+
+# フレームループは休まず回り続けるので、アイドルタスクを監視するウォッチドッグは止める
+CONFIG_ESP_TASK_WDT_INIT=n
+
+# kitty のデータ (最大 133 KB) と M5Unified で、既定の 1 MB のアプリ領域では足りない
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
