@@ -21,8 +21,7 @@ ShapoGFX の 2D リグアニメーションの簡単なサンプル。
 - `assets/kitty/` 配下のアーマチュアおよびアニメーションを ShapoGFX の `dbones2cpp` で C++ コードに変換して include する。
 - `dbones2cpp` の使用方法は ShapoGFX のドキュメントを参照。サンプルプロジェクトの `demorig` も参考にする。
 - `--scale 0.5` で 50% にスケーリングする。
-- `kitty_ske.json` の先頭には空のアーマチュア `Armature` があるので、`--armature Armature220-kitty-merged` で変換対象を指定する (指定しないとスロット 0 個のデータが生成される)。
-- `kitty_ske.json` 自体にも `idle` / `meow` が入っているが、`.dbani` の同名アニメーションが置き換える (警告が出るが問題ない)。
+- `kitty_ske.json` 自体にも `idle` / `meow` が入っているが、`kitty_idle.dbani` / `kitty_meow.dbani` の同名アニメーションが置き換える (警告が出るが問題ない)。
 - 異なる名前で次の 2 通り作成する:
     - 低速版: スケーリングオプション以外はデフォルトの設定で生成したもの (ARGB4444 のアトラス)。
     - 高速版: スケーリングに加え、`--atlas-width 0 --fit-rotate --out-format rgb565_swapped` で最適化したもの (画像ごとのテクスチャ、キーカラー、フレームバッファと同じ形式)。

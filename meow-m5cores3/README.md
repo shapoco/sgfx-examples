@@ -75,6 +75,4 @@ python3 -m pip install -r ${SHAPOGFX_PATH}/bin/requirements.txt
 ./gen_kitty.sh
 ```
 
-`kitty_ske.json` の先頭には空のアーマチュアがあるため、スクリプトは
-`--armature Armature220-kitty-merged` で変換対象を指定しています。
 オプションの意味は ShapoGFX のマニュアル (`docsrc/tools/dbones2cpp.rst`) を参照してください。
