@@ -59,8 +59,8 @@ constexpr g2::Color BUBBLE_TEXT_COLOR = g2::makeColor(255, 96, 160);  // ピン�
 constexpr g2::Color FPS_COLOR = g2::Colors::WHITE;
 
 const char *const BUBBLE_TEXT = "Meow";
-const GFXfont &BUBBLE_FONT = ShapoSansP_s21c16a01w03;
-const GFXfont &FPS_FONT = ShapoSansP_s12c09a01w02;
+const g2::GFXfont &BUBBLE_FONT = g2::ShapoSansP_s21c16a01w03;
+const g2::GFXfont &FPS_FONT = g2::ShapoSansP_s12c09a01w02;
 
 // アニメーションの長さ (秒)
 float animationSeconds(const rig::Animation &anim) {
