@@ -11,7 +11,8 @@ cd "$(dirname "$0")"
 DBONES2CPP="${SHAPOGFX_PATH}/bin/dbones2cpp"
 ASSETS=../assets/kitty
 COMMON_OPTS=(--scale 0.5)
-INPUTS=("${ASSETS}/kitty_ske.json" "${ASSETS}/kitty_idle.dbani" "${ASSETS}/kitty_meow.dbani")
+# idle と meow のアニメーションは kitty_ske.json に含まれている
+INPUTS=("${ASSETS}/kitty_ske.json")
 
 # 低速版: ARGB4444 のアトラス 1 枚 (既定の設定)
 python3 "${DBONES2CPP}" "${COMMON_OPTS[@]}" --namespace kitty_slow \
